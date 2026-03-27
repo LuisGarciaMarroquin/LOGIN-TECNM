@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Login | TecNM Campus Orizaba</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+<div class="login-card">
+
+<div class="logo-container">
+<img src="img/logos.png">
+</div>
+
+<h2>Iniciar Sesión</h2>
+
+<form onsubmit="login(event)">
+
+<div class="input-group">
+<i class="fas fa-id-card"></i>
+<input type="text" id="control" placeholder="Número de Control" required>
+</div>
+
+<div class="input-group">
+<i class="fas fa-lock"></i>
+<input type="password" id="password" placeholder="Contraseña" required>
+</div>
+
+<button type="submit">Ingresar</button>
+
+<div class="extra-links">
+<a href="#">¿Olvidaste tu contraseña?</a>
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+function login(event){
+
+event.preventDefault();
+
+let usuario = document.getElementById("control").value;
+let pass = document.getElementById("password").value;
+
+if(usuario === "21010955" && pass === "1234"){
+
+window.location.href = "portal.html";
+
+}else{
+
+alert("Número de control o contraseña incorrectos");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

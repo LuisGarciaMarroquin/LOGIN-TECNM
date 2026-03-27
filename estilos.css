@@ -1,0 +1,147 @@
+body{
+font-family: Arial, sans-serif;
+background:#f2f2f2;
+text-align:center;
+margin:0;
+padding:0;
+}
+
+header{
+background:#173a72;
+color:white;
+padding:15px;
+margin-bottom:20px;
+}
+
+.reticula{
+display:grid;
+grid-template-columns:220px 40px 220px 40px 220px;
+gap:20px;
+justify-content:center;
+}
+
+/* MATERIAS */
+.materia{
+background:white;
+border:2px solid black;
+padding:10px;
+position:relative;
+cursor:pointer;
+z-index:1;
+}
+
+/* materias de semestres 2 y 3 en gris */
+.sem2, .sem3{
+background:#d3d3d3;
+}
+
+/* cuando pasas el mouse */
+.materia:hover{
+z-index:1000;
+}
+
+/* ESTADOS */
+.estado-texto{
+margin:10px 0;
+padding:6px;
+border-radius:5px;
+font-weight:bold;
+text-align:center;
+}
+
+.curso .estado-texto{
+background:#f1c40f;
+color:black;
+}
+
+.aprobada .estado-texto{
+background:#2ecc71;
+color:white;
+}
+
+.reprobada .estado-texto{
+background:#e74c3c;
+color:white;
+}
+
+/* bloqueadas */
+.bloqueada{
+background:#aaa;
+}
+
+/* BOTONES */
+.acciones{
+display:flex;
+flex-direction:column;
+gap:5px;
+margin-top:10px;
+}
+
+button{
+padding:5px;
+font-size:12px;
+cursor:pointer;
+border:none;
+border-radius:4px;
+}
+
+button:hover{
+opacity:0.8;
+}
+
+/* TOOLTIP */
+.info{
+display:none;
+position:absolute;
+top:110%;
+left:50%;
+transform:translateX(-50%);
+background:#1f3c88;
+color:white;
+padding:10px;
+border-radius:5px;
+width:220px;
+font-size:13px;
+z-index:2000;
+text-align:left;
+}
+
+/* mostrar tooltip */
+.materia:hover .info{
+display:block;
+}
+
+/* CANDADO */
+.candado{
+position:absolute;
+top:5px;
+right:5px;
+font-size:16px;
+}
+
+/* FLECHAS */
+.flecha{
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+font-weight:bold;
+}
+
+/* espacios invisibles */
+.vacio{
+visibility:hidden;
+}
+.encabezados{
+margin-bottom:10px;
+}
+
+.semestre{
+font-weight:bold;
+text-align:center;
+}
+
+.no-cursada .estado-texto{
+background:#ccc;
+color:#333;
+}

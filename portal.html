@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Portal del Estudiante</title>
+
+<link rel="stylesheet" href="sigi.css">
+<link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Portal del Estudiante</h1>
+
+<nav>
+
+<a href="#">Inicio</a>
+<a href="#">Materias</a>
+<a href="#">Calificaciones</a>
+<a href="#">Horario</a>
+<a href="index.html">Cerrar Sesión</a>
+
+</nav>
+
+</header>
+
+
+<div class="contenedor">
+
+<!-- PERFIL -->
+
+<div class="perfil">
+
+<img src="img/foto.jpg" class="logo">
+
+<h2>Información del Estudiante</h2>
+
+<p><b>Nombre:</b> Emilio David</p>
+<p><b>Matrícula:</b> 20231234</p>
+<p><b>Carrera:</b> Ingeniería en Sistemas</p>
+<p><b>Semestre:</b> 4°</p>
+<p><b>Correo:</b> estudiante@email.com</p>
+<p><b>Teléfono:</b> 2221234567</p>
+
+</div>
+
+
+<!-- CONTENIDO -->
+
+<div class="contenido">
+
+<div class="tarjeta">
+
+<header>
+<h1>INGENIERÍA EN SISTEMAS COMPUTACIONALES</h1>
+<h3>Especialidad: Ingeniería Web</h3>
+</header>
+
+<div class="reticula encabezados">
+
+<div class="semestre">Semestre 1</div>
+<div></div>
+<div class="semestre">Semestre 2</div>
+<div></div>
+<div class="semestre">Semestre 3</div>
+
+</div>
+
+<div class="reticula">
+
+<!-- FILA 1 -->
+<div class="materia curso" id="calculo1">
+Cálculo Diferencial
+<span class="candado">🔓</span>
+<div class="estado-texto">EN CURSO</div>
+<div class="info">
+<strong>Créditos:</strong> 5<br>
+<strong>Horas:</strong> 3 teoría / 2 práctica<br><br>
+Estudio de límites, derivadas y sus aplicaciones en la resolución de problemas matemáticos.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('calculo1','curso')">Curso</button>
+<button onclick="cambiarEstado('calculo1','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('calculo1','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha">→</div>
+
+<div class="materia bloqueada sem2" id="calculo2">
+Cálculo Integral
+<span class="candado">🔒</span>
+<div class="estado-texto">BLOQUEADA</div>
+<div class="info">
+<strong>Créditos:</strong> 5<br>
+<strong>Horas:</strong> 3 teoría / 2 práctica<br><br>
+Estudio de integrales definidas e indefinidas y su aplicación en áreas y volúmenes.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('calculo2','curso')">Curso</button>
+<button onclick="cambiarEstado('calculo2','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('calculo2','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha">→</div>
+
+<div class="materia bloqueada sem3" id="calculo3">
+Cálculo Vectorial
+<span class="candado">🔒</span>
+<div class="estado-texto">BLOQUEADA</div>
+<div class="info">
+<strong>Créditos:</strong> 5<br>
+<strong>Horas:</strong> 3 teoría / 2 práctica<br><br>
+Análisis de funciones vectoriales y campos vectoriales en múltiples dimensiones.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('calculo3','curso')">Curso</button>
+<button onclick="cambiarEstado('calculo3','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('calculo3','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<!-- FILA 2 -->
+<div class="materia curso" id="fundamentos">
+Fundamentos de Programación
+<span class="candado">🔓</span>
+<div class="estado-texto">EN CURSO</div>
+<div class="info">
+<strong>Créditos:</strong> 5<br>
+<strong>Horas:</strong> 2 teoría / 3 práctica<br><br>
+Desarrollo de algoritmos y estructuras básicas para la solución de problemas computacionales.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('fundamentos','curso')">Curso</button>
+<button onclick="cambiarEstado('fundamentos','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('fundamentos','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha">→</div>
+
+<div class="materia bloqueada sem2" id="poo">
+Programación Orientada a Objetos
+<span class="candado">🔒</span>
+<div class="estado-texto">BLOQUEADA</div>
+<div class="info">
+<strong>Créditos:</strong> 5<br>
+<strong>Horas:</strong> 2 teoría / 3 práctica<br><br>
+Aplicación de clases, objetos, herencia y encapsulación en el desarrollo de software.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('poo','curso')">Curso</button>
+<button onclick="cambiarEstado('poo','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('poo','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha">→</div>
+
+<div class="materia bloqueada sem3" id="estructuras">
+Estructura de Datos
+<span class="candado">🔒</span>
+<div class="estado-texto">BLOQUEADA</div>
+<div class="info">
+<strong>Créditos:</strong> 5<br>
+<strong>Horas:</strong> 2 teoría / 3 práctica<br><br>
+Diseño y manejo de estructuras de datos para optimizar el procesamiento de información.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('estructuras','curso')">Curso</button>
+<button onclick="cambiarEstado('estructuras','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('estructuras','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<!-- FILA 3 -->
+<div class="materia curso" id="etica">
+Taller de Ética
+<div class="estado-texto">EN CURSO</div>
+<div class="info">
+Créditos:4<br>2T 2P<br>
+Formación de valores éticos en el ejercicio profesional.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('etica','curso')">Curso</button>
+<button onclick="cambiarEstado('etica','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('etica','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha vacio"></div>
+
+<div class="materia no-cursada sem2" id="conta">
+Contabilidad Financiera
+<div class="estado-texto">NO CURSADA</div>
+<div class="info">
+Créditos:4<br>2T 2P<br>
+Registro y análisis de información financiera.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('conta','curso')">Curso</button>
+<button onclick="cambiarEstado('conta','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('conta','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha vacio"></div>
+
+<div class="materia no-cursada sem2" id="cultura">
+Cultura Empresarial
+<div class="estado-texto">NO CURSADA</div>
+<div class="info">
+Créditos:4<br>2T 2P<br>
+Desarrollo de habilidades emprendedoras.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('cultura','curso')">Curso</button>
+<button onclick="cambiarEstado('cultura','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('cultura','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<!-- FILA 4 -->
+<div class="materia curso" id="discretas">
+Matemáticas Discretas
+<div class="estado-texto">EN CURSO</div>
+<div class="info">
+Créditos:5<br>3T 2P<br>
+Lógica matemática, conjuntos y grafos.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('discretas','curso')">Curso</button>
+<button onclick="cambiarEstado('discretas','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('discretas','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha vacio"></div>
+
+<div class="materia no-cursada sem2" id="quimica">
+Química
+<div class="estado-texto">NO CURSADA</div>
+<div class="info">
+Créditos:4<br>2T 2P<br>
+Fundamentos de química aplicada.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('quimica','curso')">Curso</button>
+<button onclick="cambiarEstado('quimica','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('quimica','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha vacio"></div>
+
+<div class="materia no-cursada sem2" id="operaciones">
+Investigación de Operaciones
+<div class="estado-texto">NO CURSADA</div>
+<div class="info">
+Créditos:5<br>3T 2P<br>
+Optimización y modelos matemáticos.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('operaciones','curso')">Curso</button>
+<button onclick="cambiarEstado('operaciones','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('operaciones','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<!-- FILA 5 -->
+<div class="materia curso" id="admin">
+Taller de Administración
+<div class="estado-texto">EN CURSO</div>
+<div class="info">
+Créditos:4<br>2T 2P<br>
+Gestión organizacional.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('admin','curso')">Curso</button>
+<button onclick="cambiarEstado('admin','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('admin','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha vacio"></div>
+
+<div class="materia no-cursada sem2" id="algebra">
+Álgebra Lineal
+<div class="estado-texto">NO CURSADA</div>
+<div class="info">
+Créditos:5<br>3T 2P<br>
+Matrices y vectores.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('algebra','curso')">Curso</button>
+<button onclick="cambiarEstado('algebra','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('algebra','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha vacio"></div>
+
+<div class="materia no-cursada sem2" id="sustentable">
+Desarrollo Sustentable
+<div class="estado-texto">NO CURSADA</div>
+<div class="info">
+Créditos:4<br>2T 2P<br>
+Sustentabilidad en ingeniería.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('sustentable','curso')">Curso</button>
+<button onclick="cambiarEstado('sustentable','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('sustentable','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<!-- FILA 6 -->
+<div class="materia curso" id="investigacion">
+Fundamentos de Investigación
+<div class="estado-texto">EN CURSO</div>
+<div class="info">
+Créditos:4<br>2T 2P<br>
+Metodología de investigación.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('investigacion','curso')">Curso</button>
+<button onclick="cambiarEstado('investigacion','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('investigacion','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha vacio"></div>
+
+<div class="materia no-cursada sem2" id="probabilidad">
+Probabilidad y Estadística
+<div class="estado-texto">NO CURSADA</div>
+<div class="info">
+Créditos:5<br>3T 2P<br>
+Análisis estadístico.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('probabilidad','curso')">Curso</button>
+<button onclick="cambiarEstado('probabilidad','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('probabilidad','reprobada')">Reprobada</button>
+</div>
+</div>
+
+<div class="flecha vacio"></div>
+
+<div class="materia curso sem3" id="fisica">
+Física General
+<div class="estado-texto">NO CURSADA</div>
+<div class="info">
+Créditos:5<br>3T 2P<br>
+Leyes fundamentales de la física.
+</div>
+<div class="acciones">
+<button onclick="cambiarEstado('fisica','curso')">Curso</button>
+<button onclick="cambiarEstado('fisica','aprobada')">Aprobada</button>
+<button onclick="cambiarEstado('fisica','reprobada')">Reprobada</button>
+</div>
+</div>
+
+</div>
+
+<div class="leyendas">
+
+<div class="leyenda-izquierda">
+
+<div class="flecha-explicacion">
+<span class="flecha">➜</span>
+<span>
+El inicio de la flecha indica la materia que se debe cursar primero
+<br>
+<strong>(Materia Prerrequisito)</strong>
+</span>
+</div>
+
+</div>
+
+<div class="leyenda-derecha">
+
+<table class="creditos">
+<tr>
+<td>Materias Genéricas</td>
+<td>210</td>
+</tr>
+
+<tr>
+<td>Residencias</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>Servicio Social</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>Actividades Complementarias</td>
+<td>5</td>
+</tr>
+
+<tr class="total">
+<td>Total de Créditos</td>
+<td>260</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
